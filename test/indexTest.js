@@ -23,10 +23,10 @@ describe('index.js', function () {
   });
 
   describe('randomNumber', function () {
-spyOnMathRandom.restore();
     it('contains a random number greater than or equal to 0 and less than 20', function () {
       expect(randomNumber).to.be.at.least(0).but.below(20);
     });
+    console.log(JSON.stringify(spyOnMathRandom))
 
     it("invokes 'Math.random()'", function () {
       expect(spyOnMathRandom.calledOnce).to.be.true;
